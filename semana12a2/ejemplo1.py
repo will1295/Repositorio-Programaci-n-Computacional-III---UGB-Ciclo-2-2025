@@ -29,7 +29,7 @@ modelo.compile(optimizer="adam",
                loss="sparse_categorical_crossentropy",
                metrics=["accuracy"])
 
-modelo.fit(train_images,train_labels,epochs=10)
+modelo.fit(train_images,train_labels,epochs=5)
 
 test_loss,test_acc = modelo.evaluate(test_images,test_labels)
 print("Precision del modelo: ",test_acc)
