@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block title%}Productos{%endblock%}
+{%block body%}
+<style>
+    tr,td,th{
+        border: 1px solid black;
+    }
+</style>
+
+<p>Empleado: {{empleado}}</p>
+<p>Area: {{area}}</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for p in productos%}
+        <tr>
+            <td>{{p.producto}}</td>
+            <td>${{p.precio}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+{%endblock%}

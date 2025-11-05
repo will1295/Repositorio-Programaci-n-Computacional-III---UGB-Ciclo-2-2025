@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            text-align: center;
+            background-color:darkseagreen;
+        }
+
+        img{
+            width: 5%;
+            height: 5%;
+        }
+
+    </style>
+    <title>{%block title%}Document{%endblock%}</title>
+</head>
+<body>
+    <div>
+        <h1>Mi tienda UGB</h1>
+        <img src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGllbmRhJTIwZGUlMjB2JUMzJUFEdmVyZXN8ZW58MHx8MHx8fDA%3D&fm=jpg&q=60&w=3000" alt="">
+        <nav>
+            <a href="{%url 'inicio'%}">Inicio</a>
+            <a href="{%url 'laptops'%}">Laptops</a>
+        </nav>
+
+    </div>
+    {%block body%}
+    {%endblock%}
+</body>
+</html>

@@ -1,0 +1,27 @@
+{%extends 'plantilla.html'%}
+ 
+{%block title%}Ejemplo{%endblock%}
+
+{%block body%}
+    <h1>Este texto es diferente pero comparte la plantillla</h1>
+    <h2>Bievenido {{nombre}}</h2>
+    <h3>Listado de productos</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for p in productos%}
+            <tr>
+                <td>{{p.nombre}}</td>
+                <td>${{p.precio}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+{%endblock%}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            background-color: greenyellow;
+            text-align: center;
+        }
+        img{
+            width: 5%;
+            height: 5%;
+        }
+    </style>
+    <title>{%block title%}Document{%endblock%}</title>
+</head>
+<body>
+    <div>
+        <h1>Tienda Online</h1>
+        <img src="https://www.ceupe.com/images/easyblog_articles/3625/b2ap3_large_que-es-un-tienda-online.png" alt="">
+    <nav>
+        <a href="{%url 'home'%}">Inicio</a>
+        <a href="{%url 'limpieza'%}">Limpieza</a>
+    </nav>
+    </div>
+  
+    {%block body%}{%endblock%}
+</body>
+</html>

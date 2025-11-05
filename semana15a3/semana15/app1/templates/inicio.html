@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{% block titulo %}Detalle de productos{% endblock %}
+{%block contenido %}
+
+    <h3>Empleado: {{empleado}}</h3>
+    <h4>Fecha y hora de ingreso a la plataforma: {{log}}</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for p in productos%}
+        <tr>
+            <td>{{p.nombre}}</td>
+            <td>{{p.precio}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+
+{% endblock %}
