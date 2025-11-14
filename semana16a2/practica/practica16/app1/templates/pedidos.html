@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{%block body%}
+    <h1>Lista de pedidos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Total</th>
+                <th>Nombre del cliente</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for pedido in pedidos%}
+                <tr>
+                    <td>{{pedido.fecha}}</td>
+                    <td>${{pedido.total}}</td>
+                    <td>{{pedido.cliente.nombre}} {{pedido.cliente.apellido}}</td> 
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+{%endblock%}

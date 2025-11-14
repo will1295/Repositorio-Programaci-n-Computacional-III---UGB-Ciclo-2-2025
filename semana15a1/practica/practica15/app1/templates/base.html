@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #banner{
+            background-color: aqua;
+            text-align: center;
+        }
+        
+        #producto{
+            text-align: center;
+            background-color: cadetblue;
+            border-radius: 10%;
+        }
+
+        #imgproducto{
+            width: 10%;
+            height: 10%;
+        }
+
+    </style>
+    <title>{%block title%}Document{%endblock%}</title>
+</head>
+<body>
+   <div id="banner">
+    <h1>Mi tiendita en linea</h1>
+    <img src="https://thumbs.dreamstime.com/b/simple-tienda-online-logo-concepto-vector-210636270.jpg" alt=""
+    width="5%" height="5%">
+    <a href="{%url 'inicio'%}">Inicio</a>
+    <a href="{%url 'zapatos'%}">Zapatos</a>
+    <a href="{%url 'zapatos'%}"><button>Zapatos</button></a>
+    
+    <nav>
+        <a href="{%url 'inicio'%}">Inicio</a>
+        <a href="{%url 'zapatos'%}">Zapatos</a>
+        <a href="{%url 'zapatos'%}"><button>Zapatos</button></a>        
+    </nav>
+
+   </div> 
+   {%block body%}{%endblock%}
+</body>
+</html>

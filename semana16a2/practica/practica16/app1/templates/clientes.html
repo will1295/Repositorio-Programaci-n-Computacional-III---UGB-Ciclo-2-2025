@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block body%}
+    <h1>Lista de clientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>DUI</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for cliente in clientes%}
+                <tr>
+                    <td>{{cliente.nombre}}</td>
+                    <td>{{cliente.apellido}}</td>
+                    <td>{{cliente.correo}}</td>
+                    <td>{{cliente.telefono}}</td>
+                    <td>{{cliente.dui}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+{%endblock%}

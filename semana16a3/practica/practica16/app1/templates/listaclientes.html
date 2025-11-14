@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block body%}
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for cliente in clientes%}
+            <tr>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellido}}</td>
+                <td>{{cliente.direccion}}</td>
+                <td>{{cliente.telefono}}</td>
+                <td>{{cliente.email}}</td>
+            </tr>
+            {%endfor%}
+
+        </tbody>
+    </table>
+
+{%endblock%}
