@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+
+{%block body%}
+    <h1>Crear nuevo producto</h1>
+
+    <div class="form-contenedor">
+        <form action="" method="post">
+        {%csrf_token%}
+        <label for="">Codigo</label>
+        {{form.codigo}}
+        <label for="">Nombre</label>
+        {{form.nombre}}
+        <label for="">Precio</label>
+        {{form.precio}}
+        <label for="">Stock</label>
+        {{form.stock}}
+        <button type="submit">Guardar</button>
+    </form>
+    </div>
+    
+{%endblock%}

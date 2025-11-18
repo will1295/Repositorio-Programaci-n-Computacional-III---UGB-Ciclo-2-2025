@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{%block body%}
+    <h1>Lista de productos</h1>
+
+    <a href="{%url 'crearproducto'%}"><button>Nuevo Producto</button></a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for producto in productos%}
+            <tr>
+                <td>{{producto.codigo}}</td>
+                <td>{{producto.nombre}}</td>
+                <td>${{producto.precio}}</td>
+                <td>{{producto.stock}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+    
+{%endblock%}

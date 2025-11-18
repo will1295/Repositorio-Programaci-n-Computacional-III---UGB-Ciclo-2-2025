@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            padding: 30px;
+        }
+
+        .form-contenedor{
+            padding: 25px;
+            width: 380px;
+            margin: auto;
+            border: 8px;
+            box-shadow: 0 0 12px rgba(0,0, 0,12);
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label{
+            display: block;
+            margin-top: 12px;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #0FD652;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button:hover{
+            background: #10E859;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a href="{%url 'home'%}">Pagina de inicio</a></li>
+        <li><a href="{%url 'verproductos'%}">Productos</a></li>
+    </ul>
+
+    {%block body%}{%endblock%}
+</body>
+</html>
