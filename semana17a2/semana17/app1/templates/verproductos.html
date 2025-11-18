@@ -7,8 +7,10 @@
             <tr>
                 <th>Codigo</th>
                 <th>Nombre</th>
+                <th>Categoria</th>
                 <th>Precio</th>
                 <th>Stock</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -16,6 +18,7 @@
             <tr>
                 <td>{{producto.codigo}}</td>
                 <td>{{producto.nombre}}</td>
+                <td>{{producto.fkcat.nombre}}</td>
                 <td>${{producto.precio}}</td>
                 <td>{{producto.stock}}</td>
             </tr>
