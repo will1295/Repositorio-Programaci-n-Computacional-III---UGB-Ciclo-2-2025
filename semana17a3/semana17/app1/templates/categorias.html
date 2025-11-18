@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block body%}
+    <h1>Lista de categorias</h1>
+    <a href="{%url 'crearcategoria'%}"><button>Nueva Categoria</button></a>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for categoria in categorias%}
+            <tr>
+                <td>{{categoria.nombre}}</td>
+                <td>{{categoria.descripcion}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+    
+{%endblock%}
