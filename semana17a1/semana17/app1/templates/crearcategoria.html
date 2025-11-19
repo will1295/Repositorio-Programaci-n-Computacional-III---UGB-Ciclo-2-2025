@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block body%}
+    <h1>Ingresar nueva categoria</h1>
+    <div class="form-contendor">
+        <form action="" method="post">
+            {%csrf_token%}
+            <label for="">Nombre</label>
+            {{form.nombre}}
+            <label for="">Descripcion</label>
+            {{form.descripcion}}
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+   
+{%endblock%}

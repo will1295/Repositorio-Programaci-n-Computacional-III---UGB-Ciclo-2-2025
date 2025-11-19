@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block body%}
+    <h1>Lista de productos disponibles</h1>
+    <a href="{%url 'crearproducto'%}"><button>Crear nuevo producto</button></a>
+    <table>
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                 <th>Categoria</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for producto in productos%}
+            <tr>
+                <td>{{producto.codigo}}</td>
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.categoria}}</td>
+                <td>{{producto.precio}}</td>
+                <td>{{producto.stock}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+{%endblock%}
