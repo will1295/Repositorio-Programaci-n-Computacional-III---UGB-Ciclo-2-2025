@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nuevo usuario</h1>
+    <p style="color: red;">{{error}}</p>
+    <form action="" method="post">
+        {%csrf_token%}
+        <label for="">Uusario</label>
+        <input type="text" name="username" id="">
+        <label for="">Contraseña</label>
+        <input type="password" name="password" id="">
+        <label for="">Repetir contraseña</label>
+        <input type="password" name="password2" id="">
+        <button type="submit">Registrar</button>
+    </form>
+
+    <p><a href="{%url 'login'%}">¿Ya tienes cuenta? Inicia sesion aqui</a></p>
+
+    {%for message in messages%}
+    <p>{{message}}</p>
+    {%endfor%}
+
+</body>
+</html>

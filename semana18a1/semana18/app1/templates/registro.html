@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registro de nuevo usuario</h1>
+    {%if messages%}
+        {%for message in messages%}
+            <p style="color: red;">{{message}}</p>
+        {%endfor%}
+    {%endif%}
+    <form action="" method="post">
+        {%csrf_token%}
+        <label for="">Usuario</label>
+        <input type="text" name="username" id="" required>
+        <label for="">Contraseña</label>
+        <input type="password" name="password" id="" required>
+        <label for="">Confirma tu contraseña</label>
+        <input type="password" name="password2" id="" required>
+        <button type="submit">Crear usuario</button>
+    </form>
+
+    <p><a href="{%url 'login'%}">¿Ya tienes cuenta? Inicia sesion aqui</a></p>
+</body>
+</html>
